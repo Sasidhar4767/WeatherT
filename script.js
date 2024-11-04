@@ -34,24 +34,24 @@ const body = document.querySelector('body'),
     let currentUnit = "c";
     let hourlyorWeek = "";
 
-    hourlyBtn.addEventListener('click', () => {
-        today.style.display = 'block';
-        week.style.display = 'none';
-        
-        // Add selected class to "Today" button and remove from "Week" button
-        hourlyBtn.classList.add("selected");
-        weekBtn.classList.remove("selected");
-    });
+hourlyBtn.addEventListener('click', () => {
+    today.style.display = 'block';
+    week.style.display = 'none';
     
-    weekBtn.addEventListener('click', () => {
-        week.style.display = 'block';
-        today.style.display = 'none';
-        
-        // Add selected class to "Week" button and remove from "Today" button
-        weekBtn.classList.add("selected");
-        hourlyBtn.classList.remove("selected");
-    });
+    // Add selected class to "Today" button and remove from "Week" button
+    hourlyBtn.classList.add("selected");
+    weekBtn.classList.remove("selected");
+});
+
+weekBtn.addEventListener('click', () => {
+    week.style.display = 'block';
+    today.style.display = 'none';
     
+    // Add selected class to "Week" button and remove from "Today" button
+    weekBtn.classList.add("selected");
+    hourlyBtn.classList.remove("selected");
+});
+
 
 // update date time
 

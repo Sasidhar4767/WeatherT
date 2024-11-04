@@ -248,6 +248,10 @@
   .hourly.selected {
     /* background-color: lightblue; */
     color: lightblue; /* Adjust text color if needed */
-}
+  }
+  .weekly.selected {
+    /* background-color: lightblue; */
+    color: lightblue; /* Adjust text color if needed */
+  }
 
   
