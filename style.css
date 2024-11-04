@@ -26,13 +26,13 @@
    height: inherit;
   }
   .sidebar{
-      height: inherit;
-   width: 30%;
-   min-width: 250px;
-   padding: 20px;
-   display: flex;
-   justify-content: space-between;
-   background-color:aliceblue;
+    height: inherit;
+    width: 30%;
+     min-width: 250px;
+     padding: 20px;
+     display: flex;
+    justify-content: space-between;
+    background-color:#e1e7ed;
   }
   .temperature{
       display: flex;
@@ -57,7 +57,7 @@
   }
   .search button{
       padding: 20px;
-      background-color: aquamarine;
+      background-color: #9c92f5;
       border: 1px solid white;
       font-size: 14px;
       border-top-right-radius: 10px;
@@ -92,6 +92,12 @@
   .search input:focus {
       outline: none;
       border: 1px solid var(--primary-clr);
+  }
+  .location-text{
+    margin-top: 300px;
+  }
+  #location{
+    margin-top: 980px;
   }
   .main{
     width: 100%;
@@ -203,10 +209,10 @@
       padding: 10px 20px;
       display: flex;
       flex-direction: column;
-      }
-      .card2{
-        column-gap: 50px;
-      }
+}
+.card2{
+  column-gap: 50px;
+}
   .card2 .card-heading{
       color:gainsboro;
   }
@@ -237,4 +243,11 @@
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
+    
   }
+  .hourly.selected {
+    /* background-color: lightblue; */
+    color: lightblue; /* Adjust text color if needed */
+}
+
+  

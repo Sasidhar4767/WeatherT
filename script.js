@@ -34,18 +34,26 @@ const body = document.querySelector('body'),
     let currentUnit = "c";
     let hourlyorWeek = "";
 
-hourlyBtn.addEventListener('click', (e) => {
-    today.style.display = 'block';
-    week.style.display = 'none';
-})
-
-weekBtn.addEventListener('click', (e) => {
-    week.style.display = 'block';
-    today.style.display = 'none';
-})
+    hourlyBtn.addEventListener('click', () => {
+        today.style.display = 'block';
+        week.style.display = 'none';
+        
+        // Add selected class to "Today" button and remove from "Week" button
+        hourlyBtn.classList.add("selected");
+        weekBtn.classList.remove("selected");
+    });
+    
+    weekBtn.addEventListener('click', () => {
+        week.style.display = 'block';
+        today.style.display = 'none';
+        
+        // Add selected class to "Week" button and remove from "Today" button
+        weekBtn.classList.add("selected");
+        hourlyBtn.classList.remove("selected");
+    });
+    
 
 // update date time
-
 
 
 
@@ -119,7 +127,7 @@ function getWeatherData(city, unit, hourlyorweek) {
             temp.innerText = unit === "c" ? today.temp : celciusToFarenheit(today.temp);
             currentLocation.innerText = data.resolvedAddress;
             condition.innerText = today.conditions;
-            rain.innerText = "perc -" + today.precip + "%"
+            rain.innerText = today.precip !== null ? `perc - ${today.precip}%` : "perc - 0%";
             UVIndex.innerText = today.uvindex;
             WindSpeed.innerText = today.windspeed + " km/h" ;
             humidity.innerText = today.humidity + "%";
